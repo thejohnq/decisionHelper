@@ -1,3 +1,19 @@
 // Place all the styles related to the MCDCreating controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.label-area {
+  background-color: #c238eb;
+  border: 1px solid pink;
+  border-radius: 4px;
+  color: #FAFAFA;
+  p {
+    display: inline-block;
+    float: none;  
+    margin: 8px;
+    font-weight: bold;
+  }
+}
+
+#row-dropdown {
+  margin-top: 40px;
+}

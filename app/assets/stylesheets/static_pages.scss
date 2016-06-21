@@ -1,54 +1,19 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-#content {
-  height: 210px;
-  width: 340px;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#welcome-sign {
+.jumbotron {
   background-color: #c238eb;
-  border-radius: 3px;
-  max-width: 100%;
-  padding-top: 10px;
+  padding: 30px 15px 30px 15px;
+  border: 1px solid pink;
+  border-radius: 4px;
+  color: #414141;
 }
 
-#welcome {
-  margin-top: 12px;
-  
-  font-family: Arial;
-  color: white;
-}
-
-#home-logo {
-  margin-left: 120px;
-  margin-right: 120px;
-}
-
-#title-text {
-  text-align: left;
-  font-size: 21px;
-  padding-left: 12px;
-}
-
-#subtitle-text {
-  text-align: right;
-  padding-right: 2px;
-  font-size: 18px;
-}
-
-#buttons {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.buttons {
-  width: 167.5px;
+#btnViewMCD {
+  margin-right: 50px;
 }
