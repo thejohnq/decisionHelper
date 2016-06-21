@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'mcd_creating/createProblem'
+
+  get 'mcd_creating/createCriteria'
+
+  get 'mcd_creating/createAlternatives'
+
+  get 'mcd_creating/overview'
+
   get 'static_pages/home'
 
   get 'static_pages/help'
