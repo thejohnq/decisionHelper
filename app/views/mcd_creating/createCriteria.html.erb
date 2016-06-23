@@ -10,13 +10,13 @@
   </div>
 </div>
 
-
+<% @arrCriteria.each do |crit| %>
 <div class="row">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
   <div class="col-sm-8 text-centre">
-    <input type="text" class="form-control">
+    <%= crit.to_s %>
   </div>
   <div class="col-sm-2 text-centre">
       <a href="#" class="btn btn-danger btn-lg" style="border-radius: 50%">
@@ -27,7 +27,7 @@
     
   </div>
 </div>
-
+<% end %>
 
 <div class="row">
   <div class="col-sm-1 sidenav sidewhite">
