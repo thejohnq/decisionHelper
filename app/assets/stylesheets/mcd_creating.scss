@@ -18,11 +18,26 @@
   margin-top: 40px;
 }
 
+#row-input .col-sm-1 {
+  padding-bottom: 36px;
+}
+
 #textcrit {
   height:46px;
   border: 1px solid #629c44;
   border-radius: 3px;
   background-color: #aedd94;
+}
+
+.titleCrit {
+  height:46px;
+  margin-left: -2px;
+  margin-right: -2px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  font-size: 16px;
+  padding-top: 14px;
 }
 
 #textalt {

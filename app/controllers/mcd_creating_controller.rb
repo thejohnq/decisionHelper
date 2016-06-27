@@ -6,7 +6,7 @@ class McdCreatingController < ApplicationController
   end
 
   def createCriteria
-    @arrCriteria = @@arrCriteriaGlobal;
+
   end
 
   def createAlternatives
@@ -15,9 +15,6 @@ class McdCreatingController < ApplicationController
 
   def overview
   end
-  
-  def addCritToArr
-    @arrCriteriaGlobal << 6
-  end
+
   
 end

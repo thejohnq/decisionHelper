@@ -10,36 +10,38 @@
   </div>
 </div>
 
-<% @arrCriteria.each do |crit| %>
-<div class="row">
+<div id="wrapper">
+
+</div>
+
+<div class="row" id="row-input">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
   <div class="col-sm-8 text-centre">
-    <%= crit.to_s %>
+    <input type="text" class="form-control" id="textcrit" placeholder="Enter new criterion here..">
   </div>
   <div class="col-sm-2 text-centre">
-      <a href="#" class="btn btn-danger btn-lg" style="border-radius: 50%">
-          <span class="glyphicon glyphicon-minus" ></span>
-      </a>
+      <div class="btn btn-success btn-lg" id="add-criterion" style="border-radius: 50%">
+          <span class="glyphicon glyphicon-plus" ></span>
+      </div>
   </div>
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
 </div>
-<% end %>
 
 <div class="row">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
   <div class="col-sm-8 text-centre">
-    <input type="text" class="form-control" id="textcrit">
+    <div class="form-group">
+          <textarea class="form-control" rows="2" id="description" placeholder="Enter description of criterion here..."></textarea>
+        </div>
   </div>
   <div class="col-sm-2 text-centre">
-      <a href="#" class="btn btn-success btn-lg" style="border-radius: 50%">
-          <span class="glyphicon glyphicon-plus" ></span>
-      </a>
+       
   </div>
   <div class="col-sm-1 sidenav sidewhite">
     
