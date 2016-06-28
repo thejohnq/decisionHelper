@@ -29,9 +29,12 @@ $(document).ready(function(){
         document.getElementById("description").value = '';
         tempCriterium.description = document.getElementById("textcrit").value;;
         arrCriteria.push(tempCriterium);
-        var output = "<div class=\"row\">  <div class=\"col-sm-1 sidenav sidewhite\">  </div>  <div class=\"col-sm-8 text-centre\"> <div class=\"titleCrit\">"
+        $("#row-input").animate({marginTop: "40px"});
+        $("<div class=\"row\">  <div class=\"col-sm-1 sidenav sidewhite\">  </div>  <div class=\"col-sm-8 text-centre\"> <div class=\"titleCrit\">"
                           + tempCriterium.title.toString()  +
-                          "</div> </div>  <div class=\"col-sm-2 text-centre\">      <div class=\"btn btn-danger btn-lg\" style=\"border-radius: 50%\">          <span class=\"glyphicon glyphicon-minus\" ></span>      </div>  </div>  <div class=\"col-sm-1 sidenav sidewhite\">  </div></div>";
-        $('#wrapper').append(output);
+                          "</div> </div>  <div class=\"col-sm-2 text-centre\">      <div class=\"btn btn-danger btn-lg\" style=\"border-radius: 50%; display: none;\">          <span class=\"glyphicon glyphicon-minus\"  ></span>      </div>  </div>  <div class=\"col-sm-1 sidenav sidewhite\">  </div></div>").insertBefore("#row-input");
+        $("#row-input").animate({marginTop: "0px"}, "slow");
+        $(".btn-danger").delay(1320).fadeIn("slow");
       });
+      
 }); 
