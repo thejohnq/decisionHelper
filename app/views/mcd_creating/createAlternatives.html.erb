@@ -11,25 +11,7 @@
 </div>
 
 
-<div class="row">
-  <div class="col-sm-1 sidenav sidewhite">
-    
-  </div>
-  <div class="col-sm-8 text-centre">
-    <input type="text" class="form-control">
-  </div>
-  <div class="col-sm-2 text-centre">
-      <a href="#" class="btn btn-danger btn-lg" style="border-radius: 50%">
-          <span class="glyphicon glyphicon-minus" ></span>
-      </a>
-  </div>
-  <div class="col-sm-1 sidenav sidewhite">
-    
-  </div>
-</div>
-
-
-<div class="row">
+<div class="row" id="row-input">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
@@ -37,11 +19,40 @@
     <input type="text" class="form-control" id="textalt">
   </div>
   <div class="col-sm-2 text-centre">
-      <a href="#" class="btn btn-success btn-lg" style="border-radius: 50%">
+      <div href="#" class="btn btn-success btn-lg" id="add-alternative" style="border-radius: 50%">
           <span class="glyphicon glyphicon-plus" ></span>
-      </a>
+      </div>
   </div>
   <div class="col-sm-1 sidenav sidewhite">
     
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-9 text-centre">
+    <div class="form-group">
+          <textarea class="form-control" rows="2" id="alt-description" placeholder="Enter description of criterion here..."></textarea>
+        </div>
+  </div>
+  <div class="col-sm-1 text-centre">
+       
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 sidenav sidewhite">
+    <%= link_to "Back", '#', class: "buttons btn btn-danger" %>
+  </div>
+  <div class="col-sm-4 text-centre">
+    <p></p>
+  </div>
+  <div class="col-sm-4 sidenav sidewhite">
+    <%= link_to "Next", '#', class: "buttons btn btn-success" %>
   </div>
 </div>

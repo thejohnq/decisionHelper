@@ -1,6 +1,7 @@
 class McdCreatingController < ApplicationController
   
-  @@arrCriteriaGlobal = Array.new();
+  @@arrCriteriaGlobal = ["s", "kyp"];
+  @@arrAlternativesGlobal = Array.new();
   
   def createProblem
   end
@@ -14,6 +15,18 @@ class McdCreatingController < ApplicationController
   end
 
   def overview
+    @@arrCriteriaGlobal << "x"
+    @arrCriteria = Array.new(@@arrCriteriaGlobal.length)
+    @arrCriteria = @@arrCriteriaGlobal
+    @arrCriteria << "xyu"
+  end
+  
+  def postCriteria
+    logger.debug "Person attributes hash: #{@person.attributes.inspect}"
+logger.info "Processing the request..."
+logger.fatal "Terminating application, raised unrecoverable error!!!"
+    criteria = JSON.parse(params[:criteriaJSON])
+    @@arrCriteriaGlobal = criteria
   end
 
   

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'overview/evaluating'
+
+  get 'overview/evaluating_com'
+
+  get 'overview/result'
+
   get 'mcd_creating/createProblem'
 
   get 'mcd_creating/createCriteria'
