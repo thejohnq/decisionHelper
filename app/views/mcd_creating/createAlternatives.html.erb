@@ -1,25 +1,90 @@
-<div class="row">
+<div id="createAlt">
+    <div class="row">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-10 text-centre label-area">
+        <p>Define Alternatives</p>
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    
+    <div class="row" id="row-input">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-8 text-centre">
+        <input type="text" class="form-control" id="textalt">
+      </div>
+      <div class="col-sm-2 text-centre">
+          <div href="#" class="btn btn-success btn-lg" id="add-alternative" style="border-radius: 50%">
+              <span class="glyphicon glyphicon-plus" ></span>
+          </div>
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-9 text-centre">
+        <div class="form-group">
+              <textarea class="form-control" rows="2" id="alt-description" placeholder="Enter description of criterion here..."></textarea>
+            </div>
+      </div>
+      <div class="col-sm-1 text-centre">
+           
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4 sidenav sidewhite">
+        <%= link_to "Back", '#', class: "buttons btn btn-danger" %>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToCriteria">
+          Next
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- CREATE CRITERIA ! ! ! -->
+
+<div id="createCrit">
+  <div class="row">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
   <div class="col-sm-10 text-centre label-area">
-    <p>Define Alternatives</p>
+    <p>Define Criteria</p>
   </div>
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
 </div>
 
-
 <div class="row" id="row-input">
   <div class="col-sm-1 sidenav sidewhite">
     
   </div>
   <div class="col-sm-8 text-centre">
-    <input type="text" class="form-control" id="textalt">
+    <input type="text" class="form-control" id="textcrit" placeholder="Enter new criterion here..">
   </div>
   <div class="col-sm-2 text-centre">
-      <div href="#" class="btn btn-success btn-lg" id="add-alternative" style="border-radius: 50%">
+      <div class="btn btn-success btn-lg" id="add-criterion" style="border-radius: 50%">
           <span class="glyphicon glyphicon-plus" ></span>
       </div>
   </div>
@@ -34,7 +99,7 @@
   </div>
   <div class="col-sm-9 text-centre">
     <div class="form-group">
-          <textarea class="form-control" rows="2" id="alt-description" placeholder="Enter description of criterion here..."></textarea>
+          <textarea class="form-control" rows="2" id="description" placeholder="Enter description of criterion here..."></textarea>
         </div>
   </div>
   <div class="col-sm-1 text-centre">
@@ -46,6 +111,94 @@
 </div>
 
 <div class="row">
+      <div class="col-sm-4 sidenav sidewhite">
+        <%= link_to "Back", '#', class: "buttons btn btn-danger" %>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToOverview">
+          Next
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div id="overview">
+  <div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Overview</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-3 text-centre label-area">
+    <p>Title</p>
+  </div>
+  <div class="col-sm-7 text-centre">
+      <div class="resultArea">
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-3 text-centre label-area">
+    <p>Description</p>
+  </div>
+  <div class="col-sm-7 text-centre">
+      <div class="resultArea">
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1 holder">
+ 
+  </div>
+  <div class="col-sm-10 holder">
+ 
+  </div>
+  <div class="col-sm-1 holder">
+ 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1 holder">
+ 
+  </div>
+  <div class="col-sm-10 holder">
+ 
+  </div>
+  <div class="col-sm-1 holder">
+ 
+  </div>
+</div>
+
+
+<div class="row">
   <div class="col-sm-4 sidenav sidewhite">
     <%= link_to "Back", '#', class: "buttons btn btn-danger" %>
   </div>
@@ -53,6 +206,8 @@
     <p></p>
   </div>
   <div class="col-sm-4 sidenav sidewhite">
-    <%= link_to "Next", '#', class: "buttons btn btn-success" %>
+    <%= link_to "Finish", '#', class: "buttons btn btn-success" %>
   </div>
+</div>
+
 </div>

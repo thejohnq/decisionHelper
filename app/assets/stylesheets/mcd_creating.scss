@@ -1,6 +1,22 @@
 // Place all the styles related to the MCDCreating controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+  background-color: #c238eb;
+  padding: 30px 15px 30px 15px;
+  border: 1px solid pink;
+  border-radius: 4px;
+  color: #414141;
+}
+
+#btnViewMCD {
+  margin-right: 50px;
+}
+
 .label-area {
   background-color: #c238eb;
   border: 1px solid pink;
@@ -61,4 +77,32 @@
 .resultArea {
   border: 2px solid #bbbbbb;
   min-height: 36px;
+}
+
+#content, .sidewhite{
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+#createAlt, #createCrit, #overview {
+  display: none;
+}
+.resulting-alternatives {
+  margin: 5px;
+  padding:  5px 10px 5px 10px;
+  background-color: orange;
+  float: left;
+  border-radius: 2px;
+}
+.resulting-criteria {
+  margin: 5px;
+  padding:  5px 10px 5px 10px;
+  background-color: green;
+  float: left;
+  border-radius: 2px;
+  color: white;
+}
+#resulting-criteria, #resulting-alternatives {
+  border: 2px solid #BBBBBB;
 }

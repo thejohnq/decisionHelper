@@ -1,2 +1,78 @@
-<h1>Overview#evaluating</h1>
-<p>Find me in app/views/overview/evaluating.html.erb</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Board Game Evening</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-justify label-area">
+    <p>Description</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-8 text-justify text-centre evalTable">
+    <table>
+  <tr>
+    <th>
+      <p>Hi</p>
+    </th>
+    <% @arrCrit.each do |crit| %>
+        <th id="<%= crit.id %>"><p>Crit</p></th>
+    <% end %>
+  </tr>
+  <% @arrAlt.each do |alt| %>
+      <tr>
+        <td class="cellAlternative" id="<%= alt.id %>">
+          <p>Alt</p>
+        </td>
+        <% @arrCrit.each do |crit| %>
+        <td id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
+        <% end %>
+      </tr>
+    <% end %>
+</table>
+  </div>
+  <div class="col-sm-2 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row" id="row-dropdown">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre">
+    
+  </div>
+  <div class="col-sm-6 text-centre">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+

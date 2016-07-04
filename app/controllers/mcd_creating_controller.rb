@@ -1,6 +1,7 @@
 class McdCreatingController < ApplicationController
   
-  @@arrCriteriaGlobal = ["s", "kyp"];
+  require 'json'
+  @@arrCriteriaGlobal = Array.new();
   @@arrAlternativesGlobal = Array.new();
   
   def createProblem
@@ -15,19 +16,33 @@ class McdCreatingController < ApplicationController
   end
 
   def overview
-    @@arrCriteriaGlobal << "x"
+#    crit = Criterion.new("kon","kobila")
+    cust1=Criterion.new("1", "John", "Homo")
+    cust2=Criterion.new("2", "Poul", "Hetero")
+#    @@arrCriteriaGlobal.push(cust1)
+    @@arrCriteriaGlobal.push(cust2)
     @arrCriteria = Array.new(@@arrCriteriaGlobal.length)
     @arrCriteria = @@arrCriteriaGlobal
-    @arrCriteria << "xyu"
   end
   
   def postCriteria
-    logger.debug "Person attributes hash: #{@person.attributes.inspect}"
-logger.info "Processing the request..."
-logger.fatal "Terminating application, raised unrecoverable error!!!"
-    criteria = JSON.parse(params[:criteriaJSON])
-    @@arrCriteriaGlobal = criteria
+    
+    criteria = (params[:root])
+    @@arrCriteriaGlobal = JSON.parse(criteria)
+    head :ok
   end
 
+   #def postCriteria
+   # 
+  #  criteria = (params[:root])
+ #   objArray = JSON.parse(criteria)
+#    objArray.each do |object|
+      # This is a hash object so now create a new one.
+     # newMyObject = Criterion.new(object)
+    #  newMyObject.save # You can do validation or any other processing around here.
+   #   @@arrAlternativesGlobal.push(newMyObject)
+  #  end
+ #   head :ok
+#  end
   
 end

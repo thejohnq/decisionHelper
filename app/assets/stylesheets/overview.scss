@@ -1,3 +1,38 @@
 // Place all the styles related to the Overview controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+td{
+    border:1px solid #ccc;
+    padding:5px 10px;
+    vertical-align:top;
+    word-break:break-word;
+}
+
+th {
+  background-color: #c238eb;
+  border: 1px solid pink;
+  color: #FAFAFA;
+  p {
+    display: inline-block;
+    float: none;  
+    margin: 8px;
+    font-weight: bold;
+  }
+}
+
+.evalTable {
+      border-collapse:collapse;
+    table-layout:fixed;
+}
+
+.cellAlternative {
+  background-color: #f2d8fb;
+  border: 1px solid pink;
+  color: #514444;
+  p {
+    display: inline-block;
+    float: none;  
+    margin: 8px 0 8px 0;
+    font-weight: bold;
+  }
+}
