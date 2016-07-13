@@ -8,7 +8,7 @@ td{
     word-break:break-word;
 }
 
-th {
+#eval-results-table th {
   background-color: #c238eb;
   border: 1px solid pink;
   color: #FAFAFA;
@@ -35,4 +35,36 @@ th {
     margin: 8px 0 8px 0;
     font-weight: bold;
   }
+}
+
+#eval-dropdown {
+  display: none;
+  margin-top: 30px;
+}
+
+.dropdown-menu {
+  margin-left: 40%;
+  min-width: 50px;
+  padding-bottom: 0;
+  li {
+    border-bottom: 1px #aaaaaa solid;
+  }
+  p {
+    margin-left: 55%;
+  }
+}
+
+#eval-success-msg {
+  display: none;
+  color: green;
+  min-height: 30px;
+  word-break:break-word;
+}
+
+#disambiguation {
+  min-width: 100%;
+}
+
+.disambiguation-title{
+  min-width: 60%;
 }

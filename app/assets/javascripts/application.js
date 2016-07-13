@@ -16,12 +16,21 @@
 //= require turbolinks
 //= require_tree .
 
+/*
+    variables needed for evaluating stuff
+    */
 
+var tempEvaluation = {
+  altID: "",
+  critID: "",
+  rating: "",
+}
 
+var evaluations = [];
 
-
-
-
+/*
+    variales for creating a Problem, Alternatives and Criteria
+    */
 var newProblem = {
   title: "",
   description: "",
@@ -45,11 +54,39 @@ var arrAlternatives = [];
 var i = 0;
 $(document).ready(function(){
   
-  $("td").click(function (e) {
-         var altID = (e.target.id).split(">>>split<<<")[0];
-         var critID = (e.target.id).split(">>>split<<<")[1];
-         alert(altID+" is Alt ID, Crit ID is "+critID);
-    });
+  $(".holder").click(function (e) {
+      $("#eval-dropdown").slideUp("fast", function() {
+            
+            /* Changes the text of the dropdown button */
+            $(".btn:first-child").text("Evaluate");
+            $(".btn:first-child").val("Evaluate");
+            $("#eval-dropdown").slideDown("slow");
+            var altID = (e.target.id).split(">>>split<<<")[0];
+            var critID = (e.target.id).split(">>>split<<<")[1];
+            tempEvaluation.altID = altID;
+            tempEvaluation.critID = critID;
+            });
+     });
+    
+  $(".set-rating").click(function(){
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+      tempEvaluation.rating = $(this).text();
+      evaluations.push({altID: tempEvaluation.altID, critID: tempEvaluation.critID, rating: tempEvaluation.rating});
+      for(var i=0; i<evaluations.length-1; i++)
+      {
+          if (evaluations[i].altID == tempEvaluation.altID && evaluations[i].critID == tempEvaluation.critID)
+          {
+              evaluations.splice(i, 1);
+              break;
+          }
+      }
+      
+      $("#eval-success-msg").slideDown("slow", function() {
+        $("#eval-success-msg").slideUp(2100);
+        console.log(evaluations.length)
+      });
+   });  
 
  // T H E   S C R I P T   F O R   V I E W S   A B O U T   C R E A T I N G   S T U F F   B E G I N N S   H E R E !!!! <<----     
       function addProblemToResult(){
@@ -58,6 +95,7 @@ $(document).ready(function(){
         if($('#radioObligatory').is(':checked')) 
             newProblem.obligatoryComments = true;
         $("#resultProblemTitle").html(newProblem.title);
+        $("#resultProblemDescription").html(newProblem.description);
       }
       
       function addAlternativesToResult(){

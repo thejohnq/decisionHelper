@@ -27,7 +27,7 @@
     
   </div>
   <div class="col-sm-8 text-justify text-centre evalTable">
-    <table>
+    <table id="eval-results-table">
   <tr>
     <th>
       <p>Hi</p>
@@ -42,7 +42,7 @@
           <p>Alt</p>
         </td>
         <% @arrCrit.each do |crit| %>
-        <td id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
+        <td class="holder" id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
         <% end %>
       </tr>
     <% end %>
@@ -53,22 +53,40 @@
   </div>
 </div>
 
-<div class="row" id="row-dropdown">
-  <div class="col-sm-1 sidenav sidewhite">
-    
+<div class="row" id="eval-dropdown">
+  <div class="col-sm-8 text-left">
+    <table id="disambiguation">
+        <tr>
+              <td class="disambiguation-title">"A" stands for</td>
+              <td id="a"> "top"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"B" stands for</td>
+            <td id="b"> "nice"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"?" stands for</td>
+            <td id="?"> "i am confused"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"X" stands for</td> 
+            <td id="x"> "don't think that's fine"</td>
+        </tr> 
+    </table>
   </div>
-  <div class="col-sm-4 text-centre">
-    
-  </div>
-  <div class="col-sm-6 text-centre">
+  <div class="col-sm-3 text-centre">
     <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Evaluate
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
+          <li class="set-rating"><p>A</p></li>
+          <li class="set-rating"><p>B</p></li>
+          <li class="set-rating"><p>?</p></li>
+          <li class="set-rating"><p>X</p></li>
         </ul>
+    </div>
+    <div class="text-centre" id="eval-success-msg">
+        <p>Your evaluation was saved.</p>
     </div>
   </div>
   <div class="col-sm-1 sidenav sidewhite">
@@ -76,3 +94,17 @@
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-7 text-centre">
+    
+  </div>
+  <div class="col-sm-3 text-centre">
+    
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
