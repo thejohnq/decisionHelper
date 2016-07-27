@@ -1,0 +1,317 @@
+<div id="createProb">
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Create an MCD</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <p>Title</p>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <input type="text" class="form-control" id="mcd">
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <p>Description</p>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row" id="row-dropdown">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <p>Select method</p>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Click here to select
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Lexicographic method</a></li>
+        </ul>
+    </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <p>Comments</p>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <label class="radio-inline"><input type="radio" name="optradio">Optional</label>
+    <label class="radio-inline"><input type="radio" name="optradio" id="radioObligatory">Obligatory</label>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-3 text-left">
+    <a href="#" class="btn btn-danger" role="button">Back</a>
+  </div>
+  <div class="col-sm-3 text-centre">
+
+  </div>
+  <div class="col-sm-3 text-right">
+    <div class="btn btn-success" role="button" id="btnToAlternatives">Next</div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+</div>
+
+<!-- C R E A T E   A L T E R N A T I V E -->
+
+<div id="createAlt">
+    <div class="row">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-10 text-centre label-area">
+        <p>Define Alternatives</p>
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    
+    <div class="row" id="row-input">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-8 text-centre">
+        <input type="text" class="form-control" id="textalt">
+      </div>
+      <div class="col-sm-2 text-centre">
+          <div href="#" class="btn btn-success btn-lg" id="add-alternative" style="border-radius: 50%">
+              <span class="glyphicon glyphicon-plus" ></span>
+          </div>
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+      <div class="col-sm-9 text-centre">
+        <div class="form-group">
+              <textarea class="form-control" rows="2" id="alt-description" placeholder="Enter description of criterion here..."></textarea>
+            </div>
+      </div>
+      <div class="col-sm-1 text-centre">
+           
+      </div>
+      <div class="col-sm-1 sidenav sidewhite">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-danger" id="btnBackToProblem">Back</div>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToCriteria">
+          Next
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- C R E A T E   C R I T E R I A ! ! ! -->
+
+<div id="createCrit">
+  <div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Define Criteria</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row" id="row-input-crit">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-8 text-centre">
+    <input type="text" class="form-control" id="textcrit" placeholder="Enter new criterion here..">
+  </div>
+  <div class="col-sm-2 text-centre">
+      <div class="btn btn-success btn-lg" id="add-criterion" style="border-radius: 50%">
+          <span class="glyphicon glyphicon-plus" ></span>
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-9 text-centre">
+    <div class="form-group">
+          <textarea class="form-control" rows="2" id="description" placeholder="Enter description of criterion here..."></textarea>
+        </div>
+  </div>
+  <div class="col-sm-1 text-centre">
+       
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-danger" id="btnBackToAlternatives">Back</div>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToOverview">
+          Next
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- O V E R A L L    O V E R V I E W -->
+
+<div id="overview">
+  <div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Overview</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-3 text-centre label-area">
+    <p>Title</p>
+  </div>
+  <div class="col-sm-7 text-centre">
+      <div class="resultArea" id="resultProblemTitle">
+        $newProblem.title
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-3 text-centre label-area">
+    <p>Description</p>
+  </div>
+  <div class="col-sm-7 text-centre">
+      <div class="resultArea" id="resultProblemDescription">
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1 holder">
+ 
+  </div>
+  <div class="col-sm-10 holder" id="resultAlternatives">
+ 
+  </div>
+  <div class="col-sm-1 holder">
+ 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-1 holder">
+ 
+  </div>
+  <div class="col-sm-10 holder" id="resultCriteria">
+ 
+  </div>
+  <div class="col-sm-1 holder">
+ 
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4 sidenav sidewhite">
+    <div class="buttons btn btn-danger" id="btnBackToCriteria">Back</div>
+  </div>
+  <div class="col-sm-4 text-centre">
+    <p></p>
+  </div>
+  <div class="col-sm-4 sidenav sidewhite">
+    <%= link_to "Finish", '#', class: "buttons btn btn-success" %>
+  </div>
+</div>
+
+</div>

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'problem/index'
+
+  get 'problem/show'
+
+  get 'problem/new'
+
+  get 'problem/edit'
+
+  get 'problem/create'
+
   get 'overview/evaluating'
 
   get 'overview/evaluating_com'
