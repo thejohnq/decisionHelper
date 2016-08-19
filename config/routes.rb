@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :problems
+  resources :algorithms
+  resources :criterions
+  resources :alternatives
+  resources :decisions
   get 'static_pages/home'
 
   get 'static_pages/help'

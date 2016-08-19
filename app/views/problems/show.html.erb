@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @problem.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @problem.description %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @problem.creator %>
+</p>
+
+<p>
+  <strong>Algorithm:</strong>
+  <%= @problem.algorithm_id %>
+</p>
+
+<p>
+  <strong>Obligatorycomments:</strong>
+  <%= @problem.obligatoryComments %>
+</p>
+
+<%= link_to 'Edit', edit_problem_path(@problem) %> |
+<%= link_to 'Back', problems_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  rating: MyString
+  comment: MyText
+  criterion_id: 1
+  alternative_id: 1
+  agreed_decision_id: 1
+
+two:
+  username: MyString
+  rating: MyString
+  comment: MyText
+  criterion_id: 1
+  alternative_id: 1
+  agreed_decision_id: 1
