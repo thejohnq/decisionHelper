@@ -1,3 +1,109 @@
 // Place all the styles related to the Problems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.jumbotron {
+  background-color: #c238eb;
+  padding: 30px 15px 30px 15px;
+  border: 1px solid pink;
+  border-radius: 4px;
+  color: #414141;
+}
+
+#btnViewMCD {
+  margin-right: 50px;
+}
+
+.label-area {
+  background-color: #c238eb;
+  border: 1px solid pink;
+  border-radius: 4px;
+  color: #FAFAFA;
+  p {
+    display: inline-block;
+    float: none;  
+    margin: 8px;
+    font-weight: bold;
+  }
+}
+
+#row-dropdown {
+  margin-top: 40px;
+}
+
+#row-input .col-sm-1 {
+  padding-bottom: 36px;
+}
+
+#textcrit {
+  height:46px;
+  border: 1px solid #629c44;
+  border-radius: 3px;
+  background-color: #aedd94;
+}
+
+.titleCrit {
+  height:46px;
+  margin-left: -2px;
+  margin-right: -2px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  font-size: 16px;
+  padding-top: 14px;
+}
+
+#textalt {
+  height:46px;
+  border: 1px solid #d68227;
+  border-radius: 3px;
+  background-color: #ffd8ad;
+}
+
+.titleAlt {
+  height:46px;
+  margin-left: -2px;
+  margin-right: -2px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #ffb253;
+  font-size: 16px;
+  padding-top: 14px;
+}
+
+.resultArea {
+  border: 2px solid #bbbbbb;
+  min-height: 36px;
+}
+
+#content, .sidewhite{
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+#createAlt, #createCrit, #overview {
+  display: none;
+}
+.resulting-alternatives {
+  margin: 5px;
+  padding:  5px 10px 5px 10px;
+  background-color: orange;
+  float: left;
+  border-radius: 2px;
+}
+.resulting-criteria {
+  margin: 5px;
+  padding:  5px 10px 5px 10px;
+  background-color: green;
+  float: left;
+  border-radius: 2px;
+  color: white;
+}
+#resulting-criteria, #resulting-alternatives {
+  border: 2px solid #BBBBBB;
+}

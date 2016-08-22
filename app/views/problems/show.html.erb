@@ -1,29 +1,156 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @problem.title %>
-</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>
+      <strong>Title:</strong>
+      <%= @problem.title %>
+    </p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @problem.description %>
-</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-justify label-area">
+    <p>
+      <strong>Description:</strong>
+      <%= @problem.description %>
+    </p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
 
-<p>
-  <strong>Creator:</strong>
-  <%= @problem.creator %>
-</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-justify label-area">
+    <p>
+      <strong>Creator:</strong>
+      <%= @problem.creator %>
+    </p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
 
-<p>
-  <strong>Algorithm:</strong>
-  <%= @problem.algorithm_id %>
-</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-justify label-area">
+    <p>
+      <strong>Algorithm:</strong>
+      <%= @problem.algorithm_id %>
+    </p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
 
-<p>
-  <strong>Obligatorycomments:</strong>
-  <%= @problem.obligatoryComments %>
-</p>
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-justify label-area">
+    <p>
+      <strong>Obligatorycomments:</strong>
+      <%= @problem.obligatoryComments %>
+    </p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<!-- TABLE BEGINNS HERE SOMEWHERE -->
+<div class="row">
+  <div class="col-sm-2 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-8 text-justify text-centre evalTable">
+    <table id="eval-results-table">
+  <tr>
+    <th>
+      <p>Hi</p>
+    </th>
+    <% @arrCrit.each do |crit| %>
+        <th id="<%= crit.id %>"><p>Crit</p></th>
+    <% end %>
+  </tr>
+  <% @arrAlt.each do |alt| %>
+      <tr>
+        <td class="cellAlternative" id="<%= alt.id %>">
+          <p>Alt</p>
+        </td>
+        <% @arrCrit.each do |crit| %>
+        <td class="holder" id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
+        <% end %>
+      </tr>
+    <% end %>
+</table>
+  </div>
+  <div class="col-sm-2 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<!-- CODE ABOUT SETTING EVALUATING BEGINNS HERE -->
+
+<div class="row" id="eval-dropdown">
+  <div class="col-sm-8 text-left">
+    <table id="disambiguation">
+        <tr>
+              <td class="disambiguation-title">"A" stands for</td>
+              <td id="a"> "top"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"B" stands for</td>
+            <td id="b"> "nice"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"?" stands for</td>
+            <td id="?"> "i am confused"</td>
+        </tr>
+        <tr>
+            <td class="disambiguation-title">"X" stands for</td> 
+            <td id="x"> "don't think that's fine"</td>
+        </tr> 
+    </table>
+  </div>
+  <div class="col-sm-3 text-centre">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Evaluate
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li class="set-rating"><p>A</p></li>
+          <li class="set-rating"><p>B</p></li>
+          <li class="set-rating"><p>?</p></li>
+          <li class="set-rating"><p>X</p></li>
+        </ul>
+    </div>
+    <div class="text-centre" id="eval-success-msg">
+        <p>Your evaluation was saved.</p>
+    </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>

@@ -15,6 +15,8 @@ class ProblemsController < ApplicationController
   # GET /problems/new
   def new
     @problem = Problem.new
+    @alternative = Alternative.new
+    @criterion = Criterion.new
   end
 
   # GET /problems/1/edit

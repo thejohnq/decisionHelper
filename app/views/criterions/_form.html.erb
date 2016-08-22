@@ -10,6 +10,106 @@
       </ul>
     </div>
   <% end %>
+  
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-10 text-centre label-area">
+    <p>Define Criteria</p>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row" id="row-input-crit">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-8 text-centre">
+    <%= f.text_field :title %>
+    <!--
+    <input type="text" class="form-control" id="textcrit" placeholder="Enter new criterion here..">
+    -->
+  </div>
+  <div class="col-sm-2 text-centre">
+      <div class="btn btn-success btn-lg" id="add-criterion" style="border-radius: 50%">
+          <span class="glyphicon glyphicon-plus" ></span>
+      </div>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-9 text-centre">
+    <div class="form-group">
+          <%= f.text_area :description %>
+          <!--<textarea class="form-control" rows="2" id="description" placeholder="Enter description of criterion here..."></textarea>
+          -->
+        </div>
+  </div>
+  <div class="col-sm-1 text-centre">
+       
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <%= f.label :priority %>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <%= f.number_field :priority %>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+  <div class="col-sm-4 text-centre label-area">
+    <%= f.label :problem_id %>
+  </div>
+  <div class="col-sm-6 text-centre">
+    <%= f.number_field :problem_id %>
+  </div>
+  <div class="col-sm-1 sidenav sidewhite">
+    
+  </div>
+</div>
+
+
+<div class="row">
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-danger" id="btnBackToAlternatives">Back</div>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToOverview">
+          Next
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!--
 
   <div class="field">
     <%= f.label :title %><br>
@@ -30,4 +130,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  -->
 <% end %>
