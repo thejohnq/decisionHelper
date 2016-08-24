@@ -20,13 +20,16 @@
     variables needed for evaluating stuff
     */
 
-var tempEvaluation = {
-  altID: "",
-  critID: "",
+var tempDecision = {
+  username: "",
   rating: "",
+  comment: "",
+  alternative_id: "",
+  criterion_id: "",
+  agreed_decision_id: "",
 }
 
-var evaluations = [];
+var decisions = [];
 
 /*
     variales for creating a Problem, Alternatives and Criteria
@@ -59,6 +62,11 @@ var arrAlternatives = [];
 var i = 0;
 $(document).ready(function(){
   
+  
+  /*
+        S C R I P T   R E L A T E D   T O   E V A L U A T I N G
+    */
+  
   $(".holder").click(function (e) {
       $("#eval-dropdown").slideUp("fast", function() {
             
@@ -66,32 +74,37 @@ $(document).ready(function(){
             $(".btn:first-child").text("Evaluate");
             $(".btn:first-child").val("Evaluate");
             $("#eval-dropdown").slideDown("slow");
-            var altID = (e.target.id).split(">>>split<<<")[0];
-            var critID = (e.target.id).split(">>>split<<<")[1];
-            tempEvaluation.altID = altID;
-            tempEvaluation.critID = critID;
+            var alternative_id = (e.target.id).split(">>>split<<<")[0];
+            var criterion_id = (e.target.id).split(">>>split<<<")[1];
+            tempDecision.alternative_id = alternative_id;
+            tempDecision.criterion_id = criterion_id;
             });
      });
     
   $(".set-rating").click(function(){
       $(".btn:first-child").text($(this).text());
       $(".btn:first-child").val($(this).text());
-      tempEvaluation.rating = $(this).text();
-      evaluations.push({altID: tempEvaluation.altID, critID: tempEvaluation.critID, rating: tempEvaluation.rating});
-      for(var i=0; i<evaluations.length-1; i++)
+      tempDecision.rating = $(this).text();
+      decisions.push({alternative_id: tempDecision.alternative_id, criterion_id: tempDecision.criterion_id, rating: tempDecision.rating});
+      for(var i=0; i<decisions.length-1; i++)
       {
-          if (evaluations[i].altID == tempEvaluation.altID && evaluations[i].critID == tempEvaluation.critID)
+          if (decisions[i].alternative_id == tempDecision.alternative_id && decisions[i].criterion_id == tempDecision.criterion_id)
           {
-              evaluations.splice(i, 1);
+              decisions.splice(i, 1);
               break;
           }
       }
       
+      
+      // Showing message: "Your evaluation was saved" after choosing an evaluation
       $("#eval-success-msg").slideDown("slow", function() {
         $("#eval-success-msg").slideUp(2100);
-        console.log(evaluations.length)
+        console.log(decisions.length)
       });
    });  
+
+
+
 
  // T H E   S C R I P T   F O R   V I E W S   A B O U T   C R E A T I N G   S T U F F   B E G I N N S   H E R E !!!! <<----     
       function addProblemToResult(){
@@ -137,10 +150,6 @@ $(document).ready(function(){
             $(".btn-danger").delay(855).fadeIn("slow");
             }
       });
-      
-  /*    $(".btn").click(function(){
-        alert("The button was clicked.");
-    });*/
       
       $("#add-alternative").click(function() {
         if(document.getElementById("alternative_title").value.toString().length>0) {

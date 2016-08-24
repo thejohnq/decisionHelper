@@ -86,16 +86,16 @@
     <th>
       <p>Hi</p>
     </th>
-    <% @arrCrit.each do |crit| %>
+    <% @criterions.each do |crit| %>
         <th id="<%= crit.id %>"><p>Crit</p></th>
     <% end %>
   </tr>
-  <% @arrAlt.each do |alt| %>
+  <% @alternatives.each do |alt| %>
       <tr>
         <td class="cellAlternative" id="<%= alt.id %>">
           <p>Alt</p>
         </td>
-        <% @arrCrit.each do |crit| %>
+        <% @criterions.each do |crit| %>
         <td class="holder" id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
         <% end %>
       </tr>

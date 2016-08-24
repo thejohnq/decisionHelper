@@ -10,6 +10,8 @@ class ProblemsController < ApplicationController
   # GET /problems/1
   # GET /problems/1.json
   def show
+    @alternatives = Alternative.all
+    @criterions = Criterion.all
   end
   
   # GET /problems/new
