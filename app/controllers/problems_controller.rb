@@ -7,6 +7,9 @@ class ProblemsController < ApplicationController
     @problems = Problem.all
   end
 
+
+# TODO
+#   REPLACE .all with 'where'
   # GET /problems/1
   # GET /problems/1.json
   def show
@@ -23,6 +26,8 @@ class ProblemsController < ApplicationController
 
   # GET /problems/1/edit
   def edit
+    @alternative = Alternative.all
+    @criterion = Criterion.all
   end
 
   # POST /problems

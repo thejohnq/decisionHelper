@@ -1,16 +1,6 @@
-<%= form_for(@alternative) do |f| %>
-  <% if @alternative.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@alternative.errors.count, "error") %> prohibited this alternative from being saved:</h2>
 
-      <ul>
-      <% @alternative.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+
+<div id="createAlt">
   <div class="row">
       <div class="col-sm-1 sidenav sidewhite">
         
@@ -28,7 +18,8 @@
         
       </div>
       <div class="col-sm-8 text-centre">
-        <%= f.text_field :title %><!--<input type="text" class="form-control" id="textalt">-->
+        <%#<%= f.text_field :title %>
+        <input id="alternative_title" type="text" class="form-control" name="alternative[title]" placeholder="Enter new alternative here..">
       </div>
       <div class="col-sm-2 text-centre">
           <div href="#" class="btn btn-success btn-lg" id="add-alternative" style="border-radius: 50%">
@@ -46,11 +37,8 @@
       </div>
       <div class="col-sm-9 text-centre">
         <div class="form-group">
-              <%= f.text_area :description %>
-              
-            <!--  
-              <textarea class="form-control" rows="2" id="alt-description" placeholder="Enter description of criterion here..."></textarea>
-            -->
+              <%#= f.text_area :description %>
+              <textarea class="form-control" rows="2" id="alternative_description" name="alternative[description]" placeholder="Enter description of alternative here..."></textarea>
             </div>
       </div>
       <div class="col-sm-1 text-centre">
@@ -62,52 +50,21 @@
 </div>
   
   <div class="row">
-    <div class="col-sm-1 sidenav sidewhite">
-      
-    </div>
-    <div class="col-sm-4 text-centre label-area">
-      <%= f.label :problem_id %>
-    </div>
-    <div class="col-sm-6 text-centre">
-      <%= f.number_field :problem_id %><!--<input type="text" class="form-control" id="mcd">-->
-    </div>
-    <div class="col-sm-1 sidenav sidewhite">
-      
-    </div>
-  </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-danger" id="btnBackToProblem">Back</div>
+      </div>
+      <div class="col-sm-4 text-centre">
+        <p></p>
+      </div>
+      <div class="col-sm-4 sidenav sidewhite">
+        <div class="buttons btn btn-success" id="btnToCriteria">
+          Next
+        </div>
+      </div>
+</div>
   
-  <div class="row">
-    <div class="col-sm-1 sidenav sidewhite">
-      
-    </div>
-    <div class="col-sm-3 text-left">
-      <a href="#" class="btn btn-danger" role="button">Back</a>
-    </div>
-    <div class="col-sm-3 text-centre">
-  
-    </div>
-    <div class="col-sm-3 text-right">
-      <div class="btn btn-success" role="button" id="btnToAlternatives">Next</div>
-    </div>
-    <div class="col-sm-1 sidenav sidewhite">
-      
-    </div>
-  </div>
+</div>
 
-<!--
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :problem_id %><br>
-    <%= f.number_field :problem_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>-->
-<% end %>
+
+<%# end %>
+  
