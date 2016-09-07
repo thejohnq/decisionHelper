@@ -17,8 +17,9 @@ class ProblemsController < ApplicationController
   # GET /problems/new
   def new
     @problem = Problem.new
-    @alternative = Alternative.new
-    @criterion = Criterion.new
+    @problem.alternatives.build
+    @problem.criterions.build
+    
   end
 
   # GET /problems/1/edit
@@ -73,6 +74,6 @@ class ProblemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def problem_params
-      params.require(:problem).permit(:title, :description, :creator, :algorithm_id, :obligatoryComments)
+      params.require(:problem).permit(:title, :description, :creator, :algorithm_id, :obligatoryComments, alternatives_attributes: [ :id, :title, :description, :problem_id ], criterions_attributes: [ :id, :title, :description, :problem_id, :priority])
     end
 end

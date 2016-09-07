@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :criterions
   resources :alternatives
   resources :decisions
+  
+  root 'problems#new'
+  
   get 'static_pages/home'
 
   get 'static_pages/help'
