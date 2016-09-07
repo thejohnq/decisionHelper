@@ -1,16 +1,6 @@
-<%= form_for(@criterion) do |f| %>
-  <% if @criterion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@criterion.errors.count, "error") %> prohibited this criterion from being saved:</h2>
+ 
 
-      <ul>
-      <% @criterion.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+<div id="createCrit">
 <div class="row">
   <div class="col-sm-1 sidenav sidewhite">
     
@@ -28,10 +18,10 @@
     
   </div>
   <div class="col-sm-8 text-centre">
-    <%= f.text_field :title %>
-    <!--
-    <input type="text" class="form-control" id="textcrit" placeholder="Enter new criterion here..">
-    -->
+    <%#= f.text_field :title %>
+    
+    <input type="text" class="form-control" id="criterion_title" name="criterion[title]" placeholder="Enter new criterion here..">
+    
   </div>
   <div class="col-sm-2 text-centre">
       <div class="btn btn-success btn-lg" id="add-criterion" style="border-radius: 50%">
@@ -49,9 +39,10 @@
   </div>
   <div class="col-sm-9 text-centre">
     <div class="form-group">
-          <%= f.text_area :description %>
-          <!--<textarea class="form-control" rows="2" id="description" placeholder="Enter description of criterion here..."></textarea>
-          -->
+          <%#= f.text_area :description %>
+          
+          <textarea class="form-control" rows="2" id="criterion_description" name="criterion[description]" placeholder="Enter description of criterion here..."></textarea>
+          
         </div>
   </div>
   <div class="col-sm-1 text-centre">
@@ -67,25 +58,12 @@
     
   </div>
   <div class="col-sm-4 text-centre label-area">
-    <%= f.label :priority %>
+    <%#= f.label :priority %>
+    <label for="criterion_priority">Priority</label>
   </div>
   <div class="col-sm-6 text-centre">
-    <%= f.number_field :priority %>
-  </div>
-  <div class="col-sm-1 sidenav sidewhite">
-    
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-1 sidenav sidewhite">
-    
-  </div>
-  <div class="col-sm-4 text-centre label-area">
-    <%= f.label :problem_id %>
-  </div>
-  <div class="col-sm-6 text-centre">
-    <%= f.number_field :problem_id %>
+    <%#= f.number_field :priority %>
+    <input id="criterion_priority" type="number" name="criterion[priority]">
   </div>
   <div class="col-sm-1 sidenav sidewhite">
     
@@ -93,7 +71,8 @@
 </div>
 
 
-<div class="row">
+  
+  <div class="row">
       <div class="col-sm-4 sidenav sidewhite">
         <div class="buttons btn btn-danger" id="btnBackToAlternatives">Back</div>
       </div>
@@ -105,30 +84,7 @@
           Next
         </div>
       </div>
-    </div>
-
+</div>
+  
 </div>
 
-<!--
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :priority %><br>
-    <%= f.number_field :priority %>
-  </div>
-  <div class="field">
-    <%= f.label :problem_id %><br>
-    <%= f.number_field :problem_id %>
-  </div>-->
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  
-<% end %>

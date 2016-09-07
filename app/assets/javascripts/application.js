@@ -143,6 +143,7 @@ $(document).ready(function(){
             arrCriteria[arrCriteria.length] = {
               title: tempCriterium.title,
               description: tempCriterium.description,
+              priority: tempCriterium.priority,
             }
             $("<div class=\"row\">  <div class=\"col-sm-1 sidenav sidewhite\">  </div>  <div class=\"col-sm-8 text-centre\"> <div class=\"titleCrit\">"
                               + tempCriterium.title.toString()  +
