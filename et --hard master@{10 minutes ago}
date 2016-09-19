@@ -1,0 +1,30 @@
+[33m6cbe782[m HEAD@{0}: pull: Merge made by the 'recursive' strategy.
+[33ma606b6e[m HEAD@{1}: commit: Edit CSS
+[33m3be2fdf[m HEAD@{2}: commit: Fix script
+[33m6e6effd[m HEAD@{3}: commit: Add _form again
+[33m93e32b8[m HEAD@{4}: commit: Add HTML to Problems _form
+[33m35987ed[m HEAD@{5}: checkout: moving from static-pages to connection
+[33mc24dce4[m HEAD@{6}: checkout: moving from databases to static-pages
+[33m35987ed[m HEAD@{7}: checkout: moving from static-pages to databases
+[33mc24dce4[m HEAD@{8}: checkout: moving from databases to static-pages
+[33m35987ed[m HEAD@{9}: checkout: moving from static-pages to databases
+[33mc24dce4[m HEAD@{10}: checkout: moving from master to static-pages
+[33m0492e26[m HEAD@{11}: checkout: moving from static-pages to master
+[33mc24dce4[m HEAD@{12}: checkout: moving from master to static-pages
+[33m0492e26[m HEAD@{13}: checkout: moving from static-pages to master
+[33mc24dce4[m HEAD@{14}: commit: Add controller with a proper name and structure
+[33m831b56c[m HEAD@{15}: commit: add ratings
+[33mc3fac33[m HEAD@{16}: commit: Make it all in one view
+[33m59b57d0[m HEAD@{17}: commit: Add some updates
+[33mcf71253[m HEAD@{18}: commit: Create Animations
+[33m18a30ab[m HEAD@{19}: commit: Add dynamic divs
+[33m0d9e88c[m HEAD@{20}: commit: Create Array in controller
+[33m7d9f194[m HEAD@{21}: commit: Add Create Crit and Create Alt
+[33m40b0587[m HEAD@{22}: commit: Create CreateProblem
+[33me35530c[m HEAD@{23}: commit: Edit homepage
+[33m23c1745[m HEAD@{24}: commit: Add Home Pages View
+[33m0492e26[m HEAD@{25}: checkout: moving from master to static-pages
+[33m0492e26[m HEAD@{26}: checkout: moving from static-pages to master
+[33m0492e26[m HEAD@{27}: checkout: moving from master to static-pages
+[33m0492e26[m HEAD@{28}: commit: Add a Static Pages controller
+[33mee61d16[m HEAD@{29}: clone: from git@bitbucket.org:thejohnq/decisiontool.git
