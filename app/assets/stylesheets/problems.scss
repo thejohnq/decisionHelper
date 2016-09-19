@@ -17,7 +17,7 @@
   margin-right: 50px;
 }
 
-.label-area {
+.label-area, #show-table-head {
   background-color: #c238eb;
   border: 1px solid pink;
   border-radius: 4px;
@@ -173,4 +173,21 @@ td{
 
 .disambiguation-title{
   min-width: 60%;
+}
+
+#show-table-head {
+  padding-top: 12px;
+  padding-bottom: 5px;
+  font-size: 3.2vh;
+}
+
+.show-table-row {
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-size: 2.5vh;
+  border-left: 1px solid pink;
+  border-bottom: 1px solid pink;
+}
+.show-table-cell {
+  border-right: 1px solid pink;
 }

@@ -15,6 +15,12 @@ class ProblemsController < ApplicationController
   def show
     @alternatives = Alternative.all
     @criterions = Criterion.all
+  
+  #  @number_of_decisions = @alternatives.length*@criterions.length
+  #  @kennel = []
+  #  @number_of_decisions.times do
+  #    @kennel << Decision.new
+  #  end
   end
   
   # GET /problems/new

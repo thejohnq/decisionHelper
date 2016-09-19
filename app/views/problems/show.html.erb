@@ -96,7 +96,7 @@
           <p>Alt</p>
         </td>
         <% @criterions.each do |crit| %>
-        <td class="holder" id="<%= alt.id %>>>>split<<<<%= crit.id %>">holder</td>
+        <td class="holder" id="<%= alt.id %>split<%= crit.id %>">Evaluate</td>
         <% end %>
       </tr>
     <% end %>
@@ -154,3 +154,9 @@
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |
 <%= link_to 'Back', problems_path %>
+
+
+
+<!-- C R E A T E   D E C I S I O N S -->
+
+<%#= render 'decisions/form' %>

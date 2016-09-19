@@ -59,6 +59,8 @@ var tempAlternative = {
 
 var arrAlternatives = [];
 
+var tempHolderID = 0;
+
 var i = 0;
 $(document).ready(function(){
   
@@ -68,22 +70,31 @@ $(document).ready(function(){
     */
   
   $(".holder").click(function (e) {
+            tempHolderID = e.target.id;
+            var holderText = $(this).text();
       $("#eval-dropdown").slideUp("fast", function() {
             
             /* Changes the text of the dropdown button */
-            $(".btn:first-child").text("Evaluate");
-            $(".btn:first-child").val("Evaluate");
-            $("#eval-dropdown").slideDown("slow");
-            var alternative_id = (e.target.id).split(">>>split<<<")[0];
-            var criterion_id = (e.target.id).split(">>>split<<<")[1];
+            var alternative_id = (e.target.id).split("split")[0];
+            var criterion_id = (e.target.id).split("split")[1];
             tempDecision.alternative_id = alternative_id;
             tempDecision.criterion_id = criterion_id;
+            $(".btn:first-child").text(holderText);
+            $(".btn:first-child").val(holderText);
+            $("#eval-dropdown").slideDown("slow");
+            console.log(tempHolderID);
+            console.log(holderText);
+            /* new */
+            
             });
      });
     
   $(".set-rating").click(function(){
       $(".btn:first-child").text($(this).text());
       $(".btn:first-child").val($(this).text());
+      
+      $("#"+tempHolderID).text($(this).text());
+      $("#"+tempHolderID).val($(this).text());
       tempDecision.rating = $(this).text();
       decisions.push({alternative_id: tempDecision.alternative_id, criterion_id: tempDecision.criterion_id, rating: tempDecision.rating});
       for(var i=0; i<decisions.length-1; i++)
@@ -98,10 +109,10 @@ $(document).ready(function(){
       
       // Showing message: "Your evaluation was saved" after choosing an evaluation
       $("#eval-success-msg").slideDown("slow", function() {
+   //     document.getElementById("demo").innerHTML = decisions;
         $("#eval-success-msg").slideUp(2100);
-        console.log(decisions.length)
       });
-   });  
+   });
 
 
 
@@ -145,11 +156,16 @@ $(document).ready(function(){
               description: tempCriterium.description,
               priority: tempCriterium.priority,
             }
-            $("<div class=\"row\">  <div class=\"col-sm-1 sidenav sidewhite\">  </div>  <div class=\"col-sm-8 text-centre\"> <div class=\"titleCrit\">"
+            $("<div class=\"row\" id=\"crit"+(arrCriteria.length-1)+"\">  <div class=\"col-sm-1 sidenav sidewhite\">  </div>  <div class=\"col-sm-8 text-centre\"> <div class=\"titleCrit\">"
                               + tempCriterium.title.toString()  +
-                              "</div> </div>  <div class=\"col-sm-2 text-centre\">      <div class=\"btn btn-danger btn-lg remove-criterion\" id=\"crit"+i+"\" style=\"border-radius: 50%; display: none;\">          <span class=\"glyphicon glyphicon-minus\"  ></span>      </div>  </div>  <div class=\"col-sm-1 sidenav sidewhite\">  </div></div>").insertBefore("#row-input-crit").fadeIn("slow");
+                              "</div> </div>  <div class=\"col-sm-2 text-centre\">      <div class=\"btn btn-danger btn-lg remove-criterion\" id=\"remove-crit"+(arrCriteria.length-1)+"\" style=\"border-radius: 50%; display: none;\">          <span class=\"glyphicon glyphicon-minus\"  ></span>      </div>  </div>  <div class=\"col-sm-1 sidenav sidewhite\">  </div></div>").insertBefore("#row-input-crit").fadeIn("slow");
             $(".btn-danger").delay(855).fadeIn("slow");
             }
+      });
+      
+      $("#crit0").click(function(){
+     //    var tempID = $(this).id;
+         console.log("tempID");
       });
       
       $("#add-alternative").click(function() {
